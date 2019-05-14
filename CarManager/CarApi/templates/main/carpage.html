@@ -1,0 +1,17 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+
+{% for i in car %}
+<ul class="collection">
+        <li class="collection-item avatar">
+          <i class="material-icons circle">API</i>
+          <span class="title">{{i.brand}}</span>
+          <p>{{i.model}} <br>
+             {{i.registerPlate}}
+          </p>
+          <a href="/api/cars/{{i.id}}" class="secondary-content"><i class="material-icons">View API</i></a>
+        </li>
+{% endfor %}
+
+{% endblock%}
